@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		694E41CE247A901F0025606B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694E41CC247A901F0025606B /* LaunchScreen.storyboard */; };
 		694E41DA247A94B60025606B /* PublicArt.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 694E41D9247A94B60025606B /* PublicArt.geojson */; };
 		694E41DD247AB1A40025606B /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694E41DC247AB1A40025606B /* Artwork.swift */; };
+		69B191AE2C0DE3B4007FEAFC /* MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B191AD2C0DE3B4007FEAFC /* MKMapView.swift */; };
 		69FFAC97247BF6D1006B93EC /* ArtworkViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFAC96247BF6D1006B93EC /* ArtworkViews.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		694E41CF247A901F0025606B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694E41D9247A94B60025606B /* PublicArt.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PublicArt.geojson; sourceTree = "<group>"; };
 		694E41DC247AB1A40025606B /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		69B191AD2C0DE3B4007FEAFC /* MKMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapView.swift; sourceTree = "<group>"; };
 		69FFAC96247BF6D1006B93EC /* ArtworkViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				694E41DB247A9A310025606B /* Models */,
 				694E41D6247A91DF0025606B /* Views */,
 				694E41D7247A91F50025606B /* Controllers */,
+				69B191AC2C0DE39F007FEAFC /* Extensions */,
 				694E41D8247A92000025606B /* Resources */,
 				694E41D5247A91980025606B /* Supporting Files */,
 			);
@@ -116,6 +119,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		69B191AC2C0DE39F007FEAFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				69B191AD2C0DE3B4007FEAFC /* MKMapView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,8 +153,9 @@
 		694E41B6247A901C0025606B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "Denis Abramov";
 				TargetAttributes = {
 					694E41BD247A901C0025606B = {
@@ -191,6 +203,7 @@
 				694E41C6247A901C0025606B /* ViewController.swift in Sources */,
 				69FFAC97247BF6D1006B93EC /* ArtworkViews.swift in Sources */,
 				694E41C2247A901C0025606B /* AppDelegate.swift in Sources */,
+				69B191AE2C0DE3B4007FEAFC /* MKMapView.swift in Sources */,
 				694E41DD247AB1A40025606B /* Artwork.swift in Sources */,
 				694E41C4247A901C0025606B /* SceneDelegate.swift in Sources */,
 			);
@@ -244,6 +257,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -254,6 +268,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -304,6 +319,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -314,6 +330,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
